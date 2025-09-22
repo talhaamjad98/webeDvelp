@@ -1,0 +1,36 @@
+/* Author: Talha Amjad
+   Date: 2025-09-22 */
+
+body {
+  background-color: #a6bfd6; 
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  color: #2c3e50; 
+  font-size: 2em;
+}
+
+p {
+  color: #34495e;
+  font-size: 1.1em;
+}
+
+
+
+ul li, ol li {
+
+  color: #2e8b57;
+  font-weight: bold;
+}
+
+a {
+  color: #e74c3c; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #c0392b;
+}
