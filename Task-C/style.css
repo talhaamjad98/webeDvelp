@@ -1,0 +1,27 @@
+/*
+Author: TALHA Amjad AITS24P
+Date: 2025-09-30
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+audio, video {
+    display: block;
+    margin: 0 auto;
+}
