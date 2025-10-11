@@ -1,0 +1,54 @@
+/*
+Author: Ville Heikkiniemi
+Date: 2025-09-01
+*/
+
+/* Element selectors */
+h1 {
+    color: darkblue;
+}
+p {
+    font-style: italic;
+}
+
+/* Class selectors */
+.box {
+    border: 2px solid black;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* ID selector */
+#special-message {
+    color: green;
+    font-size: 18px;
+}
+
+/* Group selectors */
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Descendant selectors */
+section ul li {
+    color: purple;
+    font-style: oblique;
+}
+
+/* Attribute selectors */
+a[target="_blank"] {
+    color: red;
+    text-decoration: underline;
+}
+
+img[alt] {
+    border: 2px dashed gray;
+    width: 200px;
+    height: auto;
+}
