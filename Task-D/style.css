@@ -1,54 +1,85 @@
 /*
-Author: Ville Heikkiniemi
-Date: 2025-09-01
+Author: Talha Amjad
+Date: 2025-10-12
 */
+
+/* General page styling */
+body {
+    background-color: #fdfaf6;
+    font-family: 'Verdana', sans-serif;
+    line-height: 1.6;
+    margin: 30px;
+    color: #333;
+}
 
 /* Element selectors */
 h1 {
-    color: darkblue;
+    color: #2b5797;
 }
+
 p {
     font-style: italic;
+    color: #444;
 }
 
 /* Class selectors */
 .box {
-    border: 2px solid black;
-    padding: 10px;
-    background-color: #f0f0f0;
+    border: 2px solid #555;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #e6f7ff;
+    border-radius: 8px;
 }
 
 .highlight {
-    background-color: yellow;
+    background-color: #fff4b2;
+    padding: 15px;
+    border-left: 5px solid #ffcc00;
     font-weight: bold;
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
 /* ID selector */
 #special-message {
-    color: green;
+    color: #0c7c59;
     font-size: 18px;
+    background-color: #eafaf1;
+    border: 1px solid #c5e5d1;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 /* Group selectors */
 h1, h2, h3 {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 /* Descendant selectors */
 section ul li {
-    color: purple;
+    color: #7b4b94;
     font-style: oblique;
 }
 
 /* Attribute selectors */
 a[target="_blank"] {
-    color: red;
+    color: #b21f1f;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 img[alt] {
-    border: 2px dashed gray;
-    width: 200px;
+    border: 3px dashed #888;
+    width: 250px;
     height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Extra touch for lists */
+ul {
+    list-style-type: square;
+    padding-left: 25px;
 }
