@@ -11,7 +11,6 @@ body {
   color: #333;
 }
 
-/* HEADER */
 .site-header {
   background: linear-gradient(90deg, #0078d7, #00b4d8);
   color: white;
@@ -26,7 +25,6 @@ body {
   margin: 0;
 }
 
-/* CONTENT AREA */
 .content {
   margin: auto;
   max-width: 900px;
@@ -48,9 +46,8 @@ body {
   padding-left: 10px;
 }
 
-/* TABLE STYLES */
 .table-wrap {
-  overflow-x: auto; /* Enables horizontal scroll on mobile */
+  overflow-x: auto;
 }
 
 table {
@@ -86,21 +83,18 @@ tr:hover td {
   transform: scale(1.02);
 }
 
-/* ICON STYLE (✅ ❌) */
+
 td {
   font-size: 1.2em;
 }
 
-/* RESPONSIVE BEHAVIOR */
 
-/* ≤ 900px: slightly reduce padding */
 @media (max-width: 900px) {
   .content {
     padding: 15px;
   }
 }
 
-/* ≤ 768px: Hide header intro, focus on student info and table */
 @media (max-width: 768px) {
   .site-header {
     font-size: 0.9em;
@@ -116,7 +110,6 @@ td {
   }
 }
 
-/* ≤ 640px: compact view */
 @media (max-width: 640px) {
   body {
     background: linear-gradient(135deg, #e3f2fd, #bbdefb);
@@ -144,7 +137,6 @@ td {
   }
 }
 
-/* ≤ 480px: single-column feel */
 @media (max-width: 480px) {
   th, td {
     font-size: 13px;
