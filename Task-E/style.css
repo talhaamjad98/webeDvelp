@@ -4,79 +4,127 @@ Date: 2025-10-12
 */
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
   margin: 0;
   padding: 0;
   color: #333;
 }
 
+/* HEADER */
 .site-header {
-  background-color: #0078d7;
+  background: linear-gradient(90deg, #0078d7, #00b4d8);
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 25px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+.site-header h1 {
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* CONTENT AREA */
 .content {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: auto;
+  max-width: 900px;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .student-info, 
 .table-wrap {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+.student-info h2,
+.table-wrap h2 {
+  color: #0078d7;
+  border-left: 5px solid #00b4d8;
+  padding-left: 10px;
+}
+
+/* TABLE STYLES */
 .table-wrap {
-  overflow-x: auto; 
+  overflow-x: auto; /* Enables horizontal scroll on mobile */
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 th, td {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 th {
-  background-color: #0078d7;
+  background: linear-gradient(90deg, #0078d7, #00b4d8);
   color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f2f9ff;
 }
 
+tr:hover td {
+  background-color: #e0f7fa;
+  transform: scale(1.02);
+}
+
+/* ICON STYLE (✅ ❌) */
+td {
+  font-size: 1.2em;
+}
+
+/* RESPONSIVE BEHAVIOR */
+
+/* ≤ 900px: slightly reduce padding */
+@media (max-width: 900px) {
+  .content {
+    padding: 15px;
+  }
+}
+
+/* ≤ 768px: Hide header intro, focus on student info and table */
 @media (max-width: 768px) {
-  .content { 
-    margin-left: 5%; 
-    margin-right: 5%; 
+  .site-header {
+    font-size: 0.9em;
+    padding: 15px 0;
   }
 
-  .site-header,
-  .intro,
-  .other-content { 
+  .intro, .other-content { 
     display: none; 
   }
 
-  .student-info,
-  .table-wrap { 
-    display: block; 
+  th, td {
+    padding: 10px;
   }
 }
 
+/* ≤ 640px: compact view */
 @media (max-width: 640px) {
-  .content { 
-    margin-left: 1%; 
-    margin-right: 1%; 
+  body {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  }
+
+  .content {
+    margin: 0 2%;
+    padding: 10px;
   }
 
   .student-info { 
@@ -89,5 +137,20 @@ tr:nth-child(even) {
 
   th, td {
     padding: 6px;
+  }
+
+  .site-header h1 {
+    font-size: 1.5em;
+  }
+}
+
+/* ≤ 480px: single-column feel */
+@media (max-width: 480px) {
+  th, td {
+    font-size: 13px;
+    padding: 5px;
+  }
+  table {
+    box-shadow: none;
   }
 }
