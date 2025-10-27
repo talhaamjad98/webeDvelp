@@ -1,3 +1,8 @@
+/*
+Author: Talha Amjad
+Date: 2025-10-12
+*/
+
 :root {
   --page-bg: #fcfdfc;
   --text: #2a2a2a;
@@ -21,10 +26,48 @@ header {
   padding: 1rem;
 }
 
-main {
-  max-width: 800px;
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
+}
+
+.info-card,
+.add-card {
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h2,
+.add-card h2 {
+  margin-top: 0;
+  color: var(--brand);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.days label {
+  margin-right: 1rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
 }
 
 button {
@@ -34,11 +77,19 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  margin-bottom: 1rem;
+}
+
+button.clear {
+  background-color: gray;
 }
 
 button:hover {
   opacity: 0.9;
+}
+
+.table-section {
+  grid-column: 1 / span 2;
+  margin-top: 2rem;
 }
 
 table {
@@ -46,19 +97,24 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid var(--border);
   padding: 0.75rem;
   text-align: left;
+}
+
+th {
+  background-color: var(--brand);
+  color: white;
 }
 
 tr:nth-child(even) {
   background-color: var(--table-alt);
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  border-top: 1px solid var(--border);
-  color: var(--text);
+@media (max-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
 }

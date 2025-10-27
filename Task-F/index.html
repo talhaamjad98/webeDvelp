@@ -1,40 +1,65 @@
+<!--
+Author: Talha Amjad
+Date: 2025-10-12
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Task F – Course Table</title>
+  <title>Weekly Timetable – Task F</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>My Courses</h1>
+    <h1>Weekly Timetable</h1>
   </header>
 
-  <main>
-    <section class="table-section">
-      <button id="addRowBtn">Add row</button>
+  <main class="wrapper">
+    <section class="info-card">
+      <h2>Information</h2>
+      <p>Your Name</p>
+      <p>Group number</p>
+    </section>
 
+    <section class="add-card">
+      <h2>Add Course</h2>
+      <div class="form-group">
+        <label for="courseName">Course name</label>
+        <input
+          type="text"
+          id="courseName"
+          placeholder="e.g., Web Development Basics"
+        />
+      </div>
+
+      <div class="form-group days">
+        <label>Days (yes = ✅ , no = ❌)</label>
+        <div>
+          <label><input type="checkbox" id="tue" /> Tue</label>
+          <label><input type="checkbox" id="thu" /> Thu</label>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button id="addRowBtn">Add row</button>
+        <button id="clearBtn" class="clear">Clear</button>
+      </div>
+    </section>
+
+    <section class="table-section">
       <table id="courseTable">
         <thead>
           <tr>
-            <th>Course Name</th>
-            <th>Credits</th>
-            <th>Teacher</th>
-            <th>Semester</th>
+            <th>Course</th>
+            <th>Tue</th>
+            <th>Thu</th>
           </tr>
         </thead>
         <tbody>
-          <!-- new rows will be added here -->
+          <!-- rows added here -->
         </tbody>
       </table>
     </section>
-  </main>
-
-  <footer>
-    <p>Task F – Basics of Web 2025</p>
-  </footer>
-
-  <script src="index.js"></script>
-</body>
-</html>
+  <
