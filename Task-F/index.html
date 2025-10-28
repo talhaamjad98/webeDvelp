@@ -19,13 +19,13 @@ Date: 2025-10-12
   <main class="container">
     <section class="info-panel">
       <h2>Talha Amjad</h2>
-      <p>Code: AITS24P</p>
+      <p>AITS24P</p>
     </section>
 
     <section class="form-panel">
       <h2>Add Course</h2>
       <label for="course-name">Course name</label>
-      <input type="text" id="course-name" placeholder="Enter course name" />
+      <input type="text" id="course-name" placeholder="e.g., Web Development Basics" />
 
       <div class="days">
         <p>Days (yes = ✅, no = ❌)</p>
@@ -49,14 +49,14 @@ Date: 2025-10-12
           </tr>
         </thead>
         <tbody id="course-table-body">
-          <!-- Rows will be added here -->
+          
         </tbody>
       </table>
     </section>
   </main>
 
   <script>
-    // Add row functionality
+ 
     document.getElementById("add-row").addEventListener("click", function () {
       const courseName = document.getElementById("course-name").value.trim();
       const tueChecked = document.getElementById("tue").checked;
@@ -64,6 +64,11 @@ Date: 2025-10-12
 
       if (courseName === "") {
         alert("Please enter a course name.");
+        return;
+      }
+
+      if (!tueChecked && !thuChecked) {
+        alert("Please select at least one day.");
         return;
       }
 
@@ -80,7 +85,7 @@ Date: 2025-10-12
       clearForm();
     });
 
-    // Clear form functionality
+ 
     document.getElementById("clear").addEventListener("click", clearForm);
 
     function clearForm() {
