@@ -13,119 +13,45 @@ Date: 2025-10-12
 
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--page-bg);
+  background: var(--page-bg);
   color: var(--text);
-  margin: 0;
+  margin: 2rem;
 }
 
-header {
-  background-color: var(--brand);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1rem;
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1rem;
-}
-
-.info-card,
-.add-card {
-  background-color: white;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-h2 {
+h1 {
   color: var(--brand);
-  margin-top: 0;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-
-.days label {
-  margin-right: 1rem;
-}
-
-.btn-group {
-  display: flex;
-  gap: 0.5rem;
 }
 
 button {
-  background-color: var(--brand);
+  background: var(--brand);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.6rem 1rem;
   cursor: pointer;
-}
-
-button.clear {
-  background-color: gray;
+  border-radius: 4px;
 }
 
 button:hover {
   opacity: 0.9;
 }
 
-.message {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-.message.error {
-  color: red;
-}
-
-.message.success {
-  color: green;
-}
-
-.table-section {
-  grid-column: 1 / span 2;
-  margin-top: 2rem;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 1.5rem;
 }
 
-th,
-td {
+th, td {
   border: 1px solid var(--border);
   padding: 0.75rem;
-  text-align: left;
+  text-align: center;
 }
 
 th {
-  background-color: var(--brand);
+  background: var(--brand);
   color: white;
 }
 
-tr:nth-child(even) {
-  background-color: var(--table-alt);
-}
-
-@media (max-width: 700px) {
-  .wrapper {
-    grid-template-columns: 1fr;
-  }
+tbody tr:nth-child(even) {
+  background: var(--table-alt);
 }

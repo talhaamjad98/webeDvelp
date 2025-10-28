@@ -6,88 +6,30 @@ Date: 2025-10-12
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weekly Course Timetable – Task F</title>
-  style.css
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task F – Weekly Timetable</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Weekly Course Timetable</h1>
-  </header>
 
-  <main class="wrapper">
-    <section class="info-card">
-      <h2>Information</h2>
-      <p>Talha Amjad</p>
-      <p>AITS24P</p>
-    </section>
+  <h1>Weekly Timetable</h1>
 
-    <section class="add-card">
-      <h2>Add Course</h2>
-      <div class="form-group">
-        <label for="courseName">Course name</label>
-        <input
-          type="text"
-          id="courseName"
-          placeholder="e.g., Basics Of Web Development"
-        />
-      </div>
+  <button id="addRowBtn">Add row</button>
 
-      <div class="form-group days">
-        <label>Days (yes = ✅ , no = ❌)</label>
-        <div>
-          <label><input type="checkbox" id="tue" /> Tue</label>
-          <label><input type="checkbox" id="thu" /> Thu</label>
-        </div>
-      </div>
+  <table id="courseTable">
+    <thead>
+      <tr>
+        <th>Course</th>
+        <th>Tue</th>
+        <th>Thu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- New rows will be appended here -->
+    </tbody>
+  </table>
 
-      <div class="btn-group">
-        <button id="addRowBtn">Add row</button>
-        <button id="clearBtn" class="clear">Clear</button>
-      </div>
-
-      <p id="message" class="message"></p>
-    </section>
-
-    <section class="table-section">
-      <table id="courseTable">
-        <thead>
-          <tr>
-            <th>Course</th>
-            <th>Tue</th>
-            <th>Thu</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </section>
-  </main>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const courseNameInput = document.getElementById("courseName");
-      const tueCheckbox = document.getElementById("tue");
-      const thuCheckbox = document.getElementById("thu");
-      const addRowBtn = document.getElementById("addRowBtn");
-      const clearBtn = document.getElementById("clearBtn");
-      const message = document.getElementById("message");
-      const courseTableBody = document.querySelector("#courseTable tbody");
-
-      addRowBtn.addEventListener("click", () => {
-        const courseName = courseNameInput.value.trim();
-        const tue = tueCheckbox.checked ? "✅" : "❌";
-        const thu = thuCheckbox.checked ? "✅" : "❌";
-
-        if (courseName === "") {
-          message.textContent = "Please enter a course name.";
-          return;
-        }
-
-        const row = document.createElement("tr");
-        row.innerHTML = `
-          <td>${courseName}</td>
-          <td>${tue}</td>
-          <td>${thu}</td>
-        `;
+  <script src="index.js"></script>
+</body>
+</h
