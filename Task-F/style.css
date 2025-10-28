@@ -9,13 +9,23 @@ Date: 2025-10-12
   --brand: #6c4f8d;
   --table-alt: #f9f5ff;
   --border: #e0e0e0;
+  --accent: #d1c4e9;
 }
 
 body {
   background-color: var(--page-bg);
   color: var(--text);
-  font-family: sans-serif;
-  margin: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--brand);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .container {
@@ -23,17 +33,23 @@ body {
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto auto;
   gap: 2rem;
+  padding: 2rem;
 }
 
 .info-panel {
   grid-row: 1 / span 2;
   border: 1px solid var(--border);
+  background-color: var(--accent);
   padding: 1rem;
+  border-radius: 8px;
 }
 
 .form-panel {
   border: 1px solid var(--border);
+  background-color: white;
   padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .table-panel {
@@ -45,6 +61,7 @@ input[type="text"] {
   padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid var(--border);
+  border-radius: 4px;
 }
 
 .days label {
@@ -58,6 +75,12 @@ button {
   padding: 0.5rem 1rem;
   margin-right: 0.5rem;
   cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5a3e75;
 }
 
 table {
@@ -65,12 +88,19 @@ table {
   border-collapse: collapse;
   margin-top: 1rem;
   border: 1px solid var(--border);
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 th, td {
   border: 1px solid var(--border);
   padding: 0.75rem;
   text-align: center;
+}
+
+thead {
+  background-color: var(--accent);
 }
 
 tbody tr:nth-child(even) {
