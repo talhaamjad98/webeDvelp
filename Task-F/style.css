@@ -12,33 +12,59 @@ Date: 2025-10-12
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: var(--page-bg);
+  background-color: var(--page-bg);
   color: var(--text);
+  font-family: sans-serif;
   margin: 2rem;
 }
 
-h1 {
-  color: var(--brand);
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+}
+
+.info-panel {
+  grid-row: 1 / span 2;
+  border: 1px solid var(--border);
+  padding: 1rem;
+}
+
+.form-panel {
+  border: 1px solid var(--border);
+  padding: 1rem;
+}
+
+.table-panel {
+  grid-column: 2;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+}
+
+.days label {
+  margin-right: 1rem;
 }
 
 button {
-  background: var(--brand);
+  background-color: var(--brand);
   color: white;
   border: none;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
   cursor: pointer;
-  border-radius: 4px;
-}
-
-button:hover {
-  opacity: 0.9;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  border: 1px solid var(--border);
 }
 
 th, td {
@@ -47,11 +73,6 @@ th, td {
   text-align: center;
 }
 
-th {
-  background: var(--brand);
-  color: white;
-}
-
 tbody tr:nth-child(even) {
-  background: var(--table-alt);
+  background-color: var(--table-alt);
 }
