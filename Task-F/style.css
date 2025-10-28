@@ -64,6 +64,10 @@ input[type="text"] {
   border-radius: 4px;
 }
 
+.days {
+  margin-bottom: 1rem;
+}
+
 .days label {
   margin-right: 1rem;
 }
