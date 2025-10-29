@@ -1,0 +1,98 @@
+<!--
+Author: Talha Amjad
+Date: 2025-10-12
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Timetable</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Weekly Timetable</h1>
+  </header>
+
+  <main class="container">
+    <section class="info-panel">
+      <h2>Talha Amjad</h2>
+      <p>AITS24P</p>
+    </section>
+
+    <section class="form-panel">
+      <h2>Add Course</h2>
+      <label for="course-name">Course name</label>
+      <input type="text" id="course-name" placeholder="e.g., Web Development Basics" />
+
+      <div class="days">
+        <p>Days (yes = ✅, no = ❌)</p>
+        <label><input type="checkbox" id="tue" /> Tue</label>
+        <label><input type="checkbox" id="thu" /> Thu</label>
+      </div>
+
+      <div class="buttons">
+        <button id="add-row">Add row</button>
+        <button id="clear">Clear</button>
+      </div>
+    </section>
+
+    <section class="table-panel">
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Tue</th>
+            <th>Thu</th>
+          </tr>
+        </thead>
+        <tbody id="course-table-body">
+          
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+ 
+    document.getElementById("add-row").addEventListener("click", function () {
+      const courseName = document.getElementById("course-name").value.trim();
+      const tueChecked = document.getElementById("tue").checked;
+      const thuChecked = document.getElementById("thu").checked;
+
+      if (courseName === "") {
+        alert("Please enter a course name.");
+        return;
+      }
+
+      if (!tueChecked && !thuChecked) {
+        alert("Please select at least one day.");
+        return;
+      }
+
+      const tableBody = document.getElementById("course-table-body");
+      const newRow = document.createElement("tr");
+
+      newRow.innerHTML = `
+        <td>${courseName}</td>
+        <td>${tueChecked ? "✅" : "❌"}</td>
+        <td>${thuChecked ? "✅" : "❌"}</td>
+      `;
+
+      tableBody.appendChild(newRow);
+      clearForm();
+    });
+
+ 
+    document.getElementById("clear").addEventListener("click", clearForm);
+
+    function clearForm() {
+      document.getElementById("course-name").value = "";
+      document.getElementById("tue").checked = false;
+      document.getElementById("thu").checked = false;
+    }
+  </script>
+</body>
+</html>
