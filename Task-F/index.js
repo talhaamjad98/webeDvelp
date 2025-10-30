@@ -14,7 +14,7 @@ document.getElementById("addCourseForm").addEventListener("submit", function (e)
   courseCell.textContent = courseName;
   row.appendChild(courseCell);
 
-  ["Tue", "Thu", "Fri"].forEach(day => {
+  ["Mon", "Tue", "Wed", "Thu", "Fri"].forEach(day => {
     const cell = document.createElement("td");
     cell.textContent = days.includes(day) ? "✅" : "❌";
     row.appendChild(cell);
