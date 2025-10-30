@@ -26,22 +26,22 @@ body {
 .site-header {
   background-color: var(--header-bg);
   color: white;
-  padding: 1.5rem;
+  padding: 0.75rem;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
 .content {
   max-width: 960px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 0 1rem;
 }
 
 .top-grid {
   display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
 }
 
@@ -50,46 +50,47 @@ body {
   flex: 1;
   background-color: white;
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .student-info-title,
 .controls-title {
   margin-top: 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--brand);
 }
 
 .form-row {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 input[type="text"] {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.4rem;
   border: 1px solid var(--border);
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
 }
 
 .days-group {
-  margin: 1rem 0;
+  margin: 0.75rem 0;
 }
 
 .days-group label {
-  margin-right: 1rem;
+  margin-right: 0.75rem;
 }
 
 .btn {
   background-color: var(--btn-bg);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 0.9rem;
   margin-right: 0.5rem;
 }
 
@@ -105,14 +106,15 @@ input[type="text"] {
 .table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .table th,
 .table td {
   border: 1px solid var(--border);
-  padding: 0.75rem;
+  padding: 0.6rem;
   text-align: center;
+  font-size: 0.95rem;
 }
 
 .table th {
