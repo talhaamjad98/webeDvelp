@@ -10,61 +10,61 @@
   <meta charset="UTF-8">
   <title>Registration Page</title>
   <link rel="stylesheet" href="style.css">
+  <!-- defer ensures JS runs after HTML is loaded -->
   <script defer src="index.js"></script>
 </head>
 
 <body>
-
+  
   <header class="site-header">
     <h1>Registration Page</h1>
   </header>
 
   <main class="content">
     <div class="top-grid">
-     
-      <section class="student-info" aria-label="Student information">
-        <h2 class="student-info-title">Information</h2>
-        <p><span class="student-name">Talha Amjad</span></p>
-        <p><span class="student-group">AITS24P</span></p>
+   
+      <section class="student-info">
+        <h2>Information</h2>
+        <p><strong>Name:</strong> Talha Amjad</p>
+        <p><strong>Group:</strong> AITS24P</p>
       </section>
 
-
-      <section class="controls" aria-label="Registration Form">
-        <h2 class="controls-title">Register New User</h2>
+      <section class="controls">
+        <h2>Register New User</h2>
 
         <form id="registrationForm" novalidate>
-     
+       
           <input type="hidden" id="timestamp" name="timestamp">
 
           <div class="form-row">
-            <label for="fullName">Full Name:</label>
-            <input id="fullName" name="fullName" type="text" placeholder="e.g., Talha Amjad">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g., John Doe">
             <small class="error" id="nameError"></small>
           </div>
 
           <div class="form-row">
-            <label for="email">Email:</label>
-            <input id="email" name="email" type="email" placeholder="e.g., talha@example.com">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="e.g., john@example.com">
             <small class="error" id="emailError"></small>
           </div>
 
           <div class="form-row">
-            <label for="phone">Phone Number:</label>
-            <input id="phone" name="phone" type="tel" placeholder="+358449775923">
-            <small class="hint">Format: +358xxxxxxxxx</small>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+358401234567">
+            <small class="hint">Format: +358 followed by 7–9 digits</small>
             <small class="error" id="phoneError"></small>
           </div>
 
           <div class="form-row">
-            <label for="birthDate">Birth Date:</label>
-            <input id="birthDate" name="birthDate" type="date">
+            <label for="birthDate">Birth Date</label>
+            <input type="date" id="birthDate" name="birthDate">
             <small class="error" id="birthError"></small>
           </div>
 
-          <div class="form-row">
+          <div class="form-row checkbox-row">
             <label>
-              <input id="terms" type="checkbox" name="terms">
-              I accept the terms and conditions.
+              <input type="checkbox" id="terms" name="terms">
+              I accept the terms and conditions
             </label>
             <small class="error" id="termsError"></small>
           </div>

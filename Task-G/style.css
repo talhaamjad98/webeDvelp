@@ -32,14 +32,14 @@ body {
 
 .student-info,
 .controls {
-  background: white;
+  background-color: white;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .form-row {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   display: flex;
   flex-direction: column;
 }
@@ -50,7 +50,7 @@ input[type="tel"],
 input[type="date"] {
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .btn {
@@ -62,39 +62,35 @@ input[type="date"] {
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #005fa3;
+.btn-secondary {
+  background-color: gray;
 }
 
-.btn-secondary {
-  background-color: #aaa;
+.btn:hover {
+  background-color: #005fa3;
 }
 
 .error {
   color: red;
   font-size: 0.9em;
-  height: 14px;
+  height: 1em;
 }
 
 .hint {
-  font-size: 0.85em;
   color: #666;
-}
-
-.table-wrap {
-  margin-top: 30px;
+  font-size: 0.85em;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 30px;
 }
 
 .table th,
 .table td {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
 }
 
 .table th {
