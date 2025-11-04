@@ -126,3 +126,4 @@ input[type="text"] {
 .table tr:nth-child(even) {
   background-color: var(--table-alt);
 }
+
