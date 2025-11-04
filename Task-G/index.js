@@ -2,88 +2,100 @@
  * Author: Talha Amjad
  * Date: 2025-10-12
  */
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("registrationForm");
+// Author: Talha Amjad
+// Date: 2025-10-12
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("registerForm");
   const tableBody = document.querySelector("#dataTable tbody");
+
+  const fullName = document.getElementById("fullName");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const birthDate = document.getElementById("birthDate");
+  const terms = document.getElementById("terms");
   const timestamp = document.getElementById("timestamp");
- 
-  function updateTimestamp() {
-    timestamp.value = new Date().toLocaleString();
-  }
 
-  function showError(id, message) {
-    document.getElementById(id).textContent = message;
-  }
+  // Error divs
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const phoneError = document.getElementById("phoneError");
+  const birthError = document.getElementById("birthError");
+  const termsError = document.getElementById("termsError");
 
-  function clearErrors() {
-    document.querySelectorAll(".error").forEach(e => e.textContent = "");
-  }
-
+  // Validation logic
   function validateForm() {
-    clearErrors();
     let valid = true;
+    clearErrors();
 
-    const fullName = document.getElementById("fullName").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const birthDate = document.getElementById("birthDate").value;
-    const terms = document.getElementById("terms").checked;
- 
-    if (!/^([A-Za-z]{2,}\s+[A-Za-z]{2,})$/.test(fullName)) {
-      showError("nameError", "Enter your full name (first and last).");
-      valid = false;
-    }
- 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showError("emailError", "Invalid email format.");
+    // Full Name: must have 2 words, each at least 2 letters
+    const nameParts = fullName.value.trim().split(" ");
+    if (nameParts.length < 2 || nameParts.some(n => n.length < 2)) {
+      nameError.textContent = "Please enter your full name (first and last).";
       valid = false;
     }
 
-    
-    if (!/^\+358\d{7,9}$/.test(phone)) {
-      showError("phoneError", "Use +358 followed by 7–9 digits.");
+    // Email: basic format
+    const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    if (!emailPattern.test(email.value.trim())) {
+      emailError.textContent = "Please enter a valid email address.";
       valid = false;
     }
- 
+
+    // Phone: Finnish format +358...
+    const phonePattern = /^\+358\d{6,9}$/;
+    if (!phonePattern.test(phone.value.trim())) {
+      phoneError.textContent = "Phone must start with +358 and have 9–12 digits total.";
+      valid = false;
+    }
+
+    // Birth date: not in the future, and optional min age 13
+    const birth = new Date(birthDate.value);
     const today = new Date();
-    const birth = new Date(birthDate);
-    if (!birthDate) {
-      showError("birthError", "Please select your birth date.");
+    const minAge = new Date(today.getFullYear() - 13, today.getMonth(), today.getDate());
+
+    if (!birthDate.value) {
+      birthError.textContent = "Please select your birth date.";
       valid = false;
     } else if (birth > today) {
-      showError("birthError", "Birth date cannot be in the future.");
+      birthError.textContent = "Birth date cannot be in the future.";
+      valid = false;
+    } else if (birth > minAge) {
+      birthError.textContent = "You must be at least 13 years old.";
       valid = false;
     }
 
-   
-    if (!terms) {
-      showError("termsError", "You must accept the terms.");
+    // Terms
+    if (!terms.checked) {
+      termsError.textContent = "You must accept the terms before submitting.";
       valid = false;
     }
 
     return valid;
   }
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); 
-    updateTimestamp();
+  function clearErrors() {
+    [nameError, emailError, phoneError, birthError, termsError].forEach(err => err.textContent = "");
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    timestamp.value = new Date().toLocaleString();
 
     if (!validateForm()) return;
- 
+
+    // Add row
     const newRow = document.createElement("tr");
     newRow.innerHTML = `
       <td>${timestamp.value}</td>
-      <td>${document.getElementById("fullName").value}</td>
-      <td>${document.getElementById("email").value}</td>
-      <td>${document.getElementById("phone").value}</td>
-      <td>${document.getElementById("birthDate").value}</td>
+      <td>${fullName.value.trim()}</td>
+      <td>${email.value.trim()}</td>
+      <td>${phone.value.trim()}</td>
+      <td>${birthDate.value}</td>
     `;
-
     tableBody.appendChild(newRow);
-    form.reset();
-    updateTimestamp();
-  });
 
-\
-  updateTimestamp();
+    form.reset();
+    clearErrors();
+  });
 });
