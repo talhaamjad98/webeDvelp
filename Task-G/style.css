@@ -15,28 +15,35 @@ body {
   background-color: #0078d7;
   color: white;
   text-align: center;
-  padding: 10px;
-  font-size: 1.1rem;
+  padding: 10px 0; 
+  font-size: 1.1rem; 
 }
 
 .content {
-  max-width: 900px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 10px;
 }
 
 .top-grid {
   display: grid;
-  grid-template-columns: 30% 70%;
-  gap: 12px;
+  grid-template-columns: 32% 68%;
+  gap: 12px; 
+  align-items: start;
 }
 
 .student-info,
 .controls {
-  background-color: white;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 10px; 
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.student-info-title,
+.controls-title {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
 }
 
 .form-row {
@@ -52,46 +59,53 @@ input[type="date"] {
   padding: 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 0.95rem;
 }
 
 .btn {
   background-color: #0078d7;
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
+  padding: 6px 12px; 
+  border-radius: 4px;
   cursor: pointer;
-}
-
-.btn-secondary {
-  background-color: gray;
+  font-size: 0.9rem;
 }
 
 .btn:hover {
   background-color: #005fa3;
 }
 
+.btn-secondary {
+  background-color: #aaa;
+}
+
 .error {
   color: red;
-  font-size: 0.9em;
-  height: 1em;
+  font-size: 0.8em;
+  height: 12px;
 }
 
 .hint {
+  font-size: 0.8em;
   color: #666;
-  font-size: 0.85em;
+}
+
+.table-wrap {
+  margin-top: 20px; 
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  font-size: 0.9rem;
 }
 
 .table th,
 .table td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 6px 8px; 
+  text-align: left;
 }
 
 .table th {

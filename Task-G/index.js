@@ -1,9 +1,12 @@
+/**
+ * Author: Talha Amjad
+ * Date: 2025-10-12
+ */
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("registrationForm");
   const tableBody = document.querySelector("#dataTable tbody");
   const timestamp = document.getElementById("timestamp");
-
-  // set timestamp automatically
+ 
   function updateTimestamp() {
     timestamp.value = new Date().toLocaleString();
   }
@@ -25,26 +28,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const phone = document.getElementById("phone").value.trim();
     const birthDate = document.getElementById("birthDate").value;
     const terms = document.getElementById("terms").checked;
-
-    // Full name: at least two words, each ≥2 letters
+ 
     if (!/^([A-Za-z]{2,}\s+[A-Za-z]{2,})$/.test(fullName)) {
       showError("nameError", "Enter your full name (first and last).");
       valid = false;
     }
-
-    // Email format
+ 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showError("emailError", "Invalid email format.");
       valid = false;
     }
 
-    // Phone format +358
+    
     if (!/^\+358\d{7,9}$/.test(phone)) {
       showError("phoneError", "Use +358 followed by 7–9 digits.");
       valid = false;
     }
-
-    // Birth date not in future
+ 
     const today = new Date();
     const birth = new Date(birthDate);
     if (!birthDate) {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       valid = false;
     }
 
-    // Terms checked
+   
     if (!terms) {
       showError("termsError", "You must accept the terms.");
       valid = false;
@@ -65,12 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // stop page reload
+    e.preventDefault(); 
     updateTimestamp();
 
     if (!validateForm()) return;
-
-    // Collect data
+ 
     const newRow = document.createElement("tr");
     newRow.innerHTML = `
       <td>${timestamp.value}</td>
@@ -82,9 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     tableBody.appendChild(newRow);
     form.reset();
-    updateTimestamp(); // update again after reset
+    updateTimestamp();
   });
 
-  // initialize timestamp on load
+\
   updateTimestamp();
 });
