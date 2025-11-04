@@ -81,25 +81,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let valid = true;
 
-    // Full name: at least 2 words, each >=2 letters
+   
     if (!/^[A-Za-zÀ-ÿ]{2,}(?:\s+[A-Za-zÀ-ÿ]{2,})+$/u.test(fullName)) {
       showError("nameError", "Please enter your full name (first and last name, each ≥ 2 letters).");
       valid = false;
     }
 
-    // Email basic format check
+   
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showError("emailError", "Please enter a valid email address (example: name@example.com).");
       valid = false;
     }
 
-    // Phone: expect +358 followed by 7–9 digits (adjust if you want)
+   
     if (!/^\+358\d{7,9}$/.test(phone)) {
       showError("phoneError", "Phone must start with +358 followed by 7–9 digits (e.g. +358401234567).");
       valid = false;
     }
 
-    // Birth date: present and not in future
+    
     if (!birthDate) {
       showError("birthError", "Please choose your birth date.");
       valid = false;
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Terms checkbox
+    
     if (!terms) {
       showError("termsError", "You must accept the terms to submit.");
       valid = false;
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Build row cell values (escape minimal HTML to avoid basic injection)
+    
     function escapeHtml(s) {
       return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
     }
