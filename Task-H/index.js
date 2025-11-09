@@ -1,9 +1,10 @@
 // Author: Talha Amjad
-// Date: 2025-10-12
+// Date: 2025-11-09
+// Task H — Form validation with Tailwind CSS
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registrationForm");
-  const tableBody = document.querySelector("#dataTable");
+  const tableBody = document.getElementById("dataTable");
   const timestamp = document.getElementById("timestamp");
 
   function updateTimestamp() {
@@ -15,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function clearErrors() {
-    document.querySelectorAll(".text-red-600").forEach(e => e.textContent = "");
+    ["nameError", "emailError", "phoneError", "birthError", "termsError"].forEach(id => {
+      document.getElementById(id).textContent = "";
+    });
   }
 
   function validateForm() {
@@ -33,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       valid = false;
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
       showError("emailError", "Invalid email format.");
       valid = false;
     }
@@ -61,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return valid;
   }
 
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
     updateTimestamp();
 
