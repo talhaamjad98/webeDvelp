@@ -4,145 +4,122 @@ Date: 2025-10-12
 */
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
   margin: 0;
   padding: 0;
   color: #333;
 }
 
+/* ===== HEADER ===== */
 .site-header {
   background: linear-gradient(90deg, #0078d7, #00b4d8);
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 25px 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-
 .site-header h1 {
   font-size: 2em;
   letter-spacing: 1px;
   margin: 0;
 }
 
+/* ===== MAIN CONTAINER ===== */
 .content {
   margin: auto;
   max-width: 900px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.student-info, 
+/* ===== SECTIONS ===== */
+.student-info,
 .table-wrap {
   margin-bottom: 25px;
 }
-
 .student-info h2,
 .table-wrap h2 {
   color: #0078d7;
   border-left: 5px solid #00b4d8;
   padding-left: 10px;
+  margin-bottom: 10px;
 }
 
+/* ===== TABLE ===== */
 .table-wrap {
   overflow-x: auto;
 }
-
 table {
   width: 100%;
+  table-layout: fixed;          /* ✅ prevents overflow */
   border-collapse: collapse;
-  background-color: white;
+  background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-th, td {
+th,
+td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
+th:first-child,
+td:first-child {
+  width: 33.4%;                 /* Course column */
+}
+th,
+td {
+  width: 13.3%;                 /* 5 weekdays = ~66.5% */
+}
 th {
   background: linear-gradient(90deg, #0078d7, #00b4d8);
-  color: white;
+  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 tr:nth-child(even) {
   background-color: #f2f9ff;
 }
-
 tr:hover td {
   background-color: #e0f7fa;
   transform: scale(1.02);
 }
-
-
 td {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
+/* ===== RESPONSIVE RULES (REQUIRED) ===== */
 
-@media (max-width: 900px) {
-  .content {
-    padding: 15px;
-  }
-}
-
+/* ≤768px → margins 5%, only student-info + table visible */
 @media (max-width: 768px) {
-  .site-header {
-    font-size: 0.9em;
-    padding: 15px 0;
-  }
-
-  .intro, .other-content { 
-    display: none; 
-  }
-
-  th, td {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 640px) {
-  body {
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-  }
-
   .content {
-    margin: 0 2%;
-    padding: 10px;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
   }
-
-  .student-info { 
-    display: none; 
+  .site-header,
+  .intro,
+  .other-content {
+    display: none !important;
   }
-
-  table {
-    font-size: 14px;
-  }
-
-  th, td {
-    padding: 6px;
-  }
-
-  .site-header h1 {
-    font-size: 1.5em;
+  .student-info,
+  .table-wrap {
+    display: block !important;
   }
 }
 
-@media (max-width: 480px) {
-  th, td {
-    font-size: 13px;
-    padding: 5px;
+/* ≤640px → margins 1%, only table visible */
+@media (max-width: 640px) {
+  .content {
+    margin-left: 1% !important;
+    margin-right: 1% !important;
   }
-  table {
-    box-shadow: none;
+  .student-info {
+    display: none !important;
   }
 }
