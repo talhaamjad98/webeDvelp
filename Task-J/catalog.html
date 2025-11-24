@@ -1,65 +1,106 @@
-<!-- catalog.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drone Catalog - SkyRent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
 
-<!-- Product 5 -->
-<article class="product-card">
-<picture class="product-img">
-<source type="image/webp" srcset="https://images.pexels.com/photos/315638/pexels-photo-315638.webp">
-<img src="https://images.pexels.com/photos/315638/pexels-photo-315638.jpeg" alt="Large endurance drone flying over sea" width="800" height="500" loading="lazy">
-</picture>
-<div class="product-body">
-<h3>EnduroLong</h3>
-<p class="product-desc">High-endurance platform for long mapping missions, extended range and payload options.</p>
-<p class="price">249 €/wk</p>
-</div>
-</article>
+<header class="hero small-hero">
+  <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3ede?auto=format&fit=crop&w=1600&q=80"
+       alt="Drone flying above mountains">
+  <div class="hero-text">
+    <h1>Drone Catalog</h1>
+    <p>Select from our professional rental fleet.</p>
+  </div>
+</header>
 
+<main>
 
-<!-- Product 6 (includes required example.jpg) -->
-<article class="product-card">
-<picture class="product-img">
-<!-- IMPORTANT: include your local example.jpg in /images/example.jpg -->
-<source type="image/webp" srcset="/images/example.webp">
-<img src="/images/example.jpg" alt="Example image required by the assignment (replace with provided example.jpg)" width="800" height="500" loading="lazy">
-</picture>
-<div class="product-body">
-<h3>Training Pack</h3>
-<p class="product-desc">Starter pack: SkyMini + training session + charger — ideal for new pilots learning safely.</p>
-<p class="price">49 €/d</p>
-</div>
-</article>
-
-
-</div>
+<section class="catalog-intro">
+  <h2>Available Rentals</h2>
+  <p>Choose from surveying, photography, and adventure-ready drones.</p>
 </section>
 
+<section class="catalog-grid">
 
-<!-- Video section (accessible): poster, MP4 + WEBM + captions track -->
-<section class="catalog-video">
-<h2>Product Tour & Safety</h2>
-<p>Watch our short brand and safety intro (captions available).</p>
+  <!-- Required teacher image -->
+  <article class="catalog-item">
+    <img src="images/example.jpg" alt="Example required image">
+    <h3>Example Drone</h3>
+    <p>Included as required by the assignment. Demonstrates image handling.</p>
+    <span class="price">49 €/d — 199 €/wk</span>
+  </article>
 
+  <!-- Item 1 -->
+  <article class="catalog-item">
+    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80" 
+         alt="LIDAR mapping drone">
+    <h3>SkyMaster Survey Drone</h3>
+    <p>High-precision LIDAR mapping for industrial and research use.</p>
+    <span class="price">89 €/d — 399 €/wk</span>
+  </article>
 
-<!-- Replace videos/brand-intro.* with real files. Keep duration short (30–90s) -->
-<video controls preload="metadata" poster="/images/video-poster.jpg" class="catalog-player" width="800">
-<source src="/videos/brand-intro.webm" type="video/webm">
-<source src="/videos/brand-intro.mp4" type="video/mp4">
-<!-- captions VTT file (if speech present) -->
-<track src="/videos/brand-en.vtt" kind="captions" srclang="en" label="English captions">
-Your browser does not support the video tag.
-</video>
+  <!-- Item 2 -->
+  <article class="catalog-item">
+    <img src="https://images.unsplash.com/photo-1523966211575-eb4a4ea10b36?auto=format&fit=crop&w=800&q=80" 
+         alt="Professional 4K drone">
+    <h3>AeroVision 4K</h3>
+    <p>Perfect for filmmakers requiring smooth and ultra-sharp footage.</p>
+    <span class="price">59 €/d — 249 €/wk</span>
+  </article>
+
+  <!-- Item 3 -->
+  <article class="catalog-item">
+    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80" 
+         alt="Beginner friendly drone">
+    <h3>SkyMini Explorer</h3>
+    <p>Lightweight and beginner-friendly. Great for hobby pilots.</p>
+    <span class="price">39 €/d — 149 €/wk</span>
+  </article>
+
+  <!-- Item 4 -->
+  <article class="catalog-item">
+    <img src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&w=800&q=80" 
+         alt="Adventure drone">
+    <h3>TrailHawk Adventure</h3>
+    <p>Durable drone designed for harsh weather and long-range flights.</p>
+    <span class="price">79 €/d — 329 €/wk</span>
+  </article>
+
+  <!-- Item 5 -->
+  <article class="catalog-item">
+    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" 
+         alt="Cinematic filming drone">
+    <h3>CinePro Ultra</h3>
+    <p>Cinematic drone with advanced stabilization and dual-camera setup.</p>
+    <span class="price">99 €/d — 449 €/wk</span>
+  </article>
+
 </section>
 
+<section class="video-section">
+  <h2>Product Demo</h2>
+
+  <video controls preload="metadata"
+         poster="https://images.unsplash.com/photo-1508614999368-9260051291ea?auto=format&fit=crop&w=800&q=80">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+    <track src="videos/demo.vtt" kind="captions" srclang="en" label="English">
+    Your browser does not support video playback.
+  </video>
+</section>
 
 </main>
 
-
 <footer>
-<p>© 2025 SkyRent Drones</p>
-<p>Email: contact@skyrent.com</p>
-<p>Follow us on: Instagram | YouTube | TikTok</p>
+  <p>© 2025 SkyRent Drones</p>
+  <p>Email: contact@skyrent.com</p>
+  <p>Follow us: Instagram | YouTube | TikTok</p>
 </footer>
-
 
 </body>
 </html>
