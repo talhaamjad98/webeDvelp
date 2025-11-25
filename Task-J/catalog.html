@@ -5,53 +5,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drone Catalog – SkyRent</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyRent Catalog</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+<header class="nav-header">
+  <nav>
+    <h1>SkyRent Drones</h1>
+    <a class="cta small" href="index.html">Back to Home</a>
+  </nav>
+</header>
 
-    <section>
-        <h2>Our Drone Catalog</h2>
-    </section>
+<main>
 
-    <div class="catalog-container">
+<!-- BIG CLEAN TOP IMAGE ONLY -->
+<section class="catalog-hero-img">
+  <img src="https://github.com/vheikkiniemi/BasicsOfWebDevelopment2025S/blob/main/Assignments/example.jpg?raw=true" 
+       alt="Catalog top image">
+</section>
 
-        <!-- ITEM 1 -->
-        <div class="catalog-item">
-            <img src="images/drone1.jpg" alt="Sky Surveyor X1 Drone">
-            <h3>Sky Surveyor X1</h3>
-            <p>Perfect for land surveying, 4K stabilized camera, 40-min flight time.</p>
-            <p><strong>39 € / day</strong></p>
-        </div>
 
-        <!-- ITEM 2 -->
-        <div class="catalog-item">
-            <img src="images/drone2.jpg" alt="AeroMap Pro Drone">
-            <h3>AeroMap Pro</h3>
-            <p>Advanced mapping drone with obstacle avoidance and HD streaming.</p>
-            <p><strong>59 € / day</strong></p>
-        </div>
+<section class="catalog-grid">
 
-        <!-- ITEM 3 – SKY PHOTO ULTRA (added missing image) -->
-        <div class="catalog-item">
-            <img src="images/sky-photo-ultra.jpg" alt="Sky Photo Ultra Drone">
-            <h3>Sky Photo Ultra</h3>
-            <p>Professional 8K camera drone for cinematic photography.</p>
-            <p><strong>89 € / day</strong></p>
-        </div>
+  <article class="card">
+    <img src="https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg" alt="LIDAR Survey Drone">
+    <h3>SkyMaster Survey Drone</h3>
+    <p>High-accuracy LIDAR drone for advanced mapping tasks.</p>
+    <p class="price">89 €/d · 299 €/wk</p>
+  </article>
 
-    </div>
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e" alt="4K cinematic drone">
+    <h3>AeroVision 4K</h3>
+    <p>4K professional drone for clean, stable footage.</p>
+    <p class="price">59 €/d · 199 €/wk</p>
+  </article>
 
-    <!-- CATALOG VIDEO -->
-    <section>
-        <h2>Drone Overview Video</h2>
-        <video class="catalog-video" controls>
-            <source src="videos/intro.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
+  <article class="card">
+    <img src="https://images.pexels.com/photos/402035/pexels-photo-402035.jpeg" alt="Small beginner drone">
+    <h3>SkyMini Explorer</h3>
+    <p>Lightweight, durable, and beginner-friendly model.</p>
+    <p class="price">29 €/d · 120 €/wk</p>
+  </article>
+
+  <article class="card">
+    <img src="https://images.pexels.com/photos/258205/pexels-photo-258205.jpeg" alt="Fishing and rescue drone">
+    <h3>RescuePro X2</h3>
+    <p>Weather-resistant drone with long-range capability.</p>
+    <p class="price">79 €/d · 260 €/wk</p>
+  </article>
+
+  <article class="card">
+    <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="FPV racing drone">
+    <h3>FPV Racer 300</h3>
+    <p>High-speed FPV drone built for racing and agility.</p>
+    <p class="price">49 €/d · 150 €/wk</p>
+  </article>
+
+  <article class="card">
+    <img src="https://images.pexels.com/photos/1806913/pexels-photo-1806913.jpeg" alt="Photography drone">
+    <h3>SkyPhoto Ultra</h3>
+    <p>Premium gimbal and ultra-stable flight for photo pros.</p>
+    <p class="price">69 €/d · 220 €/wk</p>
+  </article>
+
+</section>
+
+<section class="video-section">
+  <h2>Product Overview Video</h2>
+
+  <video controls preload="metadata" width="100%">
+    <source src="https://cdn.pixabay.com/vimeo/172638405/drone-5677.mp4" type="video/mp4">
+    <source src="https://archive.org/download/DroneFlying/DroneFlying.webm" type="video/webm">
+  </video>
+
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 SkyRent Drones</p>
+  <p>Email: contact@skyrent.com</p>
+</footer>
 
 </body>
 </html>
