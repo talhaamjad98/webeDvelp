@@ -2,83 +2,105 @@
   Author: Talha Amjad
   Date: 2025-11-25
 -->
+<!--
+  Author: Talha Amjad
+  Date: 2025-11-25
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyRent Catalog</title>
   <link rel="stylesheet" href="style.css" />
-  <title>SkyRent - Catalog</title>
 </head>
+
 <body>
-  <header class="header">
-    <h1>SkyRent</h1>
-    <nav>
-      <a href="index.html" class="btn">Home</a>
-    </nav>
-  </header>
+<header class="nav-header">
+  <nav>
+    <h1>SkyRent Drones</h1>
+    <a class="cta small" href="index.html">Back to Home</a>
+  </nav>
+</header>
 
-  <section class="intro">
-    <h2>Our Rental Catalog</h2>
-    <p>High‑quality equipment for photography, videography, and aerial imaging.</p>
+<main>
 
-    <!-- REQUIRED example.jpg from teacher -->
-    <img src="example.jpg" alt="Example image required by assignment" class="example-img" />
-  </section>
+<section class="intro">
+  <h2>Drone Rental Catalog</h2>
+  <p>Browse our selection of professional drones suitable for mapping, filming, and exploration.</p>
+</section>
 
-  <section class="grid">
+<!-- FIXED EXAMPLE IMAGE -->
+<section class="example-img">
+  <h2>Example Image</h2>
+  <img src="example.jpg" alt="Example image provided by teacher" loading="lazy">
+</section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0" alt="Canon EOS R5 Camera" />
-      <h3>Canon EOS R5</h3>
-      <p>High‑resolution mirrorless camera perfect for professional shoots.</p>
-      <span class="price">39 €/d — 199 €/wk</span>
-    </div>
+<section class="catalog-grid">
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Nikon Z6 II" />
-      <h3>Nikon Z6 II</h3>
-      <p>Versatile full‑frame camera ideal for photo and video work.</p>
-      <span class="price">29 €/d — 149 €/wk</span>
-    </div>
+  <article class="card">
+    <img src="https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg" alt="LIDAR Survey Drone" loading="lazy">
+    <h3>SkyMaster Survey Drone</h3>
+    <p>High-accuracy LIDAR drone for advanced mapping tasks.</p>
+    <p class="price">89 €/d · 299 €/wk</p>
+  </article>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="DJI Mavic Air 2" />
-      <h3>DJI Mavic Air 2</h3>
-      <p>Compact drone offering beautiful 4K aerial footage.</p>
-      <span class="price">49 €/d — 219 €/wk</span>
-    </div>
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e" alt="4K cinematic drone" loading="lazy">
+    <h3>AeroVision 4K</h3>
+    <p>4K professional drone for clean, stable footage.</p>
+    <p class="price">59 €/d · 199 €/wk</p>
+  </article>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1519183071298-a2962be90b8e" alt="GoPro Hero 11" />
-      <h3>GoPro Hero 11</h3>
-      <p>Action camera built for adventure and high‑speed shooting.</p>
-      <span class="price">15 €/d — 89 €/wk</span>
-    </div>
+  <article class="card">
+    <img src="https://images.pexels.com/photos/402035/pexels-photo-402035.jpeg" alt="Small beginner drone" loading="lazy">
+    <h3>SkyMini Explorer</h3>
+    <p>Lightweight, durable, and beginner-friendly model.</p>
+    <p class="price">29 €/d · 120 €/wk</p>
+  </article>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16" alt="Tripod ProFlex" />
-      <h3>Tripod ProFlex</h3>
-      <p>Stable and lightweight tripod for all environments.</p>
-      <span class="price">9 €/d — 49 €/wk</span>
-    </div>
+  <article class="card">
+    <img src="https://images.pexels.com/photos/258205/pexels-photo-258205.jpeg" alt="Fishing and rescue drone" loading="lazy">
+    <h3>RescuePro X2</h3>
+    <p>Weather-resistant drone with long-range capability.</p>
+    <p class="price">79 €/d · 260 €/wk</p>
+  </article>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="SkyPhoto Ultra Drone Camera" />
-      <h3>SkyPhoto Ultra</h3>
-      <p>Advanced long‑range drone camera with ultra‑clear imaging.</p>
-      <span class="price">59 €/d — 249 €/wk</span>
-    </div>
+  <article class="card">
+    <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="FPV racing drone" loading="lazy">
+    <h3>FPV Racer 300</h3>
+    <p>High-speed FPV drone built for racing and agility.</p>
+    <p class="price">49 €/d · 150 €/wk</p>
+  </article>
 
-  </section>
+  <article class="card">
+    <img src="https://images.pexels.com/photos/1806913/pexels-photo-1806913.jpeg" alt="Photography drone" loading="lazy">
+    <h3>SkyPhoto Ultra</h3>
+    <p>Premium gimbal and ultra-stable flight for photo pros.</p>
+    <p class="price">69 €/d · 220 €/wk</p>
+  </article>
 
-  <section class="video-section">
-    <h2>Product Overview Video</h2>
-    <video controls preload="metadata" poster="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="video">
-      <source src="video.mp4" type="video/mp4" />
-      <source src="video.webm" type="video/webm" />
-      <track kind="captions" src="captions.vtt" srclang="en" label="English captions" />
-    </video>
-  </section>
+</section>
+
+<!-- ✔ ADDED FULL VIDEO SECTION WITH REAL CLIPS -->
+<section class="video-section">
+  <h2>Product Overview Video</h2>
+
+  <video controls preload="metadata" width="100%" poster="example.jpg">
+    <source src="https://cdn.pixabay.com/vimeo/172638405/drone-5677.mp4?width=1280&hash=02d1ea56c7c1da8cdcb713bca0a96399a28d1e14" type="video/mp4">
+    <source src="https://archive.org/download/DroneFlying/DroneFlying.webm" type="video/webm">
+    <track kind="captions" src="captions.vtt" srclang="en" label="English">
+  </video>
+
+  <p style="margin-top: 10px; color:#333;">Drone overview video with captions included.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 SkyRent Drones</p>
+  <p>Email: contact@skyrent.com</p>
+</footer>
+
 </body>
 </html>
