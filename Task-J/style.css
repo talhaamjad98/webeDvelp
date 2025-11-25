@@ -1,38 +1,22 @@
-/* style.css
+/*
 Author: Talha Amjad
-Date: 2025-11-20 (updated for Catalog page)
+Date: 2025-11-20
 */
-/* ===========================
-   Global design system
-=========================== */
 
-:root {
-  --primary: #007bff;
-  --primary-dark: #005fcc;
-  --text: #1a1a1a;
-  --bg: #ffffff;
-  --card-bg: #f5f9ff;
-}
-
-
-/* Basic reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}  
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-
+  color: #1a1a1a;
+  background-color: #ffffff;
   line-height: 1.6;
 }
 
-
-/* ===========================
-   HERO
-=========================== */
+/* ---------------- HERO ---------------- */
 
 .hero {
   position: relative;
@@ -41,15 +25,11 @@ body {
   overflow: hidden;
 }
 
-.small-hero {
-  height: 45vh;
-}
-
 .hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(65%);
+  filter: brightness(70%);
 }
 
 .hero-text {
@@ -57,9 +37,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 .hero-text h1 {
@@ -67,16 +46,9 @@ body {
   margin-bottom: 10px;
 }
 
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-
-/* CTA button */
 .cta {
   display: inline-block;
-  background-color: var(--primary);
+  background-color: #007bff;
   color: white;
   padding: 12px 24px;
   border-radius: 6px;
@@ -85,13 +57,15 @@ body {
 }
 
 .cta:hover {
-  background-color: var(--primary-dark);
+  background-color: #005fcc;
 }
 
+.cta.small {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+}
 
-/* ===========================
-   SECTIONS
-=========================== */
+/* ---------------- SECTIONS ---------------- */
 
 section {
   padding: 50px 10%;
@@ -99,16 +73,14 @@ section {
 }
 
 h2 {
+  font-size: 2rem;
   color: #004b9b;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
+/* ---------------- CARD GRID ---------------- */
 
-/* ===========================
-   CARD GRID (Landing)
-=========================== */
-
-.card-grid {
+.card-grid, .catalog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
@@ -116,10 +88,10 @@ h2 {
 }
 
 .card {
-  background: var(--card-bg);
+  background-color: #f5f9ff;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,50,0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: 0.3s;
 }
 
@@ -135,78 +107,52 @@ h2 {
   margin-bottom: 15px;
 }
 
-
-/* ===========================
-   CATALOG GRID
-=========================== */
-
-.catalog-grid {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  padding: 40px 10%;
-}
-
-.catalog-item {
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,50,0.1);
-}
-
-.catalog-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.catalog-item .price {
-  display: inline-block;
+.price {
   margin-top: 10px;
   font-weight: bold;
   color: #003f87;
 }
 
-
-/* ===========================
-   VIDEO SECTION
-=========================== */
-
-.video-section {
-  padding: 50px 10%;
-}
+/* ---------------- VIDEO ---------------- */
 
 .video-section video {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-top: 20px;
 }
 
+/* ---------------- NAV HEADER ---------------- */
 
-/* ===========================
-   FOOTER
-=========================== */
+.nav-header {
+  background-color: #003366;
+  padding: 20px;
+  color: white;
+}
+
+.nav-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------------- FOOTER ---------------- */
 
 footer {
-  background: #003366;
+  background-color: #003366;
   color: white;
   text-align: center;
   padding: 25px;
   margin-top: 50px;
 }
 
-footer p {
-  margin: 8px 0;
+/* ---------------- EXAMPLE IMAGE ---------------- */
+
+.example-img img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
 }
 
-
-/* ===========================
-   RESPONSIVE
-=========================== */
+/* ---------------- RESPONSIVE ---------------- */
 
 @media (max-width: 768px) {
   .hero-text h1 {
