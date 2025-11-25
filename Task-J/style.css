@@ -2,178 +2,77 @@
 Author: Talha Amjad
 Date: 2025-11-20
 */
-
-/* Global Reset */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-
 body {
-font-family: Arial, Helvetica, sans-serif;
-background-color: #ffffff;
-color: #1a1a1a;
-line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
 }
-
-/* HEADER */
 .header {
-background-color: #003366;
-color: white;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 10%;
+  background: #003366;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.header h1 {
-font-size: 1.8rem;
+.btn {
+  background: #ff9900;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
 }
-.header nav a {
-color: white;
-text-decoration: none;
-background-color: #0069e6;
-padding: 10px 18px;
-border-radius: 6px;
-transition: 0.3s;
-}
-.header nav a:hover {
-background-color: #004fb3;
-}
-
-/* HERO */
 .hero {
-position: relative;
-width: 100%;
-height: 65vh;
-overflow: hidden;
+  position: relative;
 }
 .hero img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-filter: brightness(70%);
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
 }
 .hero-text {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-text-align: center;
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
 }
-.hero-text h2 {
-font-size: 2.5rem;
-margin-bottom: 12px;
+.intro {
+  padding: 2rem;
+  text-align: center;
 }
-.hero-text p {
-font-size: 1.1rem;
-margin-bottom: 20px;
+.example-img {
+  width: 250px;
+  margin-top: 1rem;
 }
-
-/* BUTTON */
-.btn, .cta {
-display: inline-block;
-background-color: #007bff;
-color: white;
-padding: 12px 24px;
-border-radius: 6px;
-text-decoration: none;
-transition: 0.3s ease;
-}
-.btn:hover, .cta:hover {
-background-color: #005fcc;
-}
-
-/* SECTIONS */
-section {
-padding: 50px 10%;
-}
-h2 {
-font-size: 2rem;
-color: #004b9b;
-margin-bottom: 15px;
-text-align: center;
-}
-
-/* CARD GRID */
-.card-grid, .grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 25px;
-margin-top: 25px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
 }
 .card {
-background: #f5f9ff;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 2px 10px rgba(0, 0, 50, 0.1);
-transition: 0.3s ease;
-text-align: center;
-}
-.card:hover {
-transform: translateY(-5px);
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .card img {
-width: 100%;
-height: 180px;
-object-fit: cover;
-border-radius: 8px;
-margin-bottom: 12px;
-}
-.card h3 {
-color: #003f87;
-margin-bottom: 6px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 .price {
-display: block;
-margin-top: 10px;
-font-weight: bold;
-color: #002d5e;
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
-
-/* EXAMPLE IMAGE */
-.example-img {
-width: 300px;
-margin: 20px auto;
-display: block;
-border-radius: 8px;
-}
-
-/* VIDEO SECTION */
 .video-section {
-text-align: center;
+  padding: 2rem;
+  text-align: center;
 }
 .video {
-width: 80%;
-max-width: 750px;
-border-radius: 12px;
-margin-top: 20px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-footer {
-background-color: #003366;
-color: white;
-text-align: center;
-padding: 25px 0;
-margin-top: 50px;
-}
-footer p {
-margin: 6px 0;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-.hero-text h2 {
-font-size: 1.8rem;
-}
-.hero-text p {
-font-size: 1rem;
-}
-.video {
-width: 95%;
-}
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
 }

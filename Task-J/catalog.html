@@ -3,62 +3,82 @@
   Date: 2025-11-25
 -->
 <!DOCTYPE html>
-<p class="price">59 €/d — 210 €/wk</p>
-</article>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>SkyRent - Catalog</title>
+</head>
+<body>
+  <header class="header">
+    <h1>SkyRent</h1>
+    <nav>
+      <a href="index.html" class="btn">Home</a>
+    </nav>
+  </header>
 
+  <section class="intro">
+    <h2>Our Rental Catalog</h2>
+    <p>High‑quality equipment for photography, videography, and aerial imaging.</p>
 
-<article class="card">
-<img src="https://images.pexels.com/photos/402035/pexels-photo-402035.jpeg" alt="Mini explorer drone" />
-<h3>SkyMini Explorer</h3>
-<p>Lightweight, beginner-friendly, ultra-stable.</p>
-<p class="price">35 €/d — 120 €/wk</p>
-</article>
+    <!-- REQUIRED example.jpg from teacher -->
+    <img src="example.jpg" alt="Example image required by assignment" class="example-img" />
+  </section>
 
+  <section class="grid">
 
-<article class="card">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Professional photo drone" />
-<h3>SkyPhoto Ultra</h3>
-<p>High-detail aerial photography with crisp stabilization.</p>
-<p class="price">75 €/d — 260 €/wk</p>
-</article>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0" alt="Canon EOS R5 Camera" />
+      <h3>Canon EOS R5</h3>
+      <p>High‑resolution mirrorless camera perfect for professional shoots.</p>
+      <span class="price">39 €/d — 199 €/wk</span>
+    </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Nikon Z6 II" />
+      <h3>Nikon Z6 II</h3>
+      <p>Versatile full‑frame camera ideal for photo and video work.</p>
+      <span class="price">29 €/d — 149 €/wk</span>
+    </div>
 
-<article class="card">
-<img src="https://images.unsplash.com/photo-1484704849700-f032a568e944" alt="Long range drone" />
-<h3>HawkRange Pro</h3>
-<p>Long-distance drone with enhanced battery life.</p>
-<p class="price">80 €/d — 290 €/wk</p>
-</article>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="DJI Mavic Air 2" />
+      <h3>DJI Mavic Air 2</h3>
+      <p>Compact drone offering beautiful 4K aerial footage.</p>
+      <span class="price">49 €/d — 219 €/wk</span>
+    </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519183071298-a2962be90b8e" alt="GoPro Hero 11" />
+      <h3>GoPro Hero 11</h3>
+      <p>Action camera built for adventure and high‑speed shooting.</p>
+      <span class="price">15 €/d — 89 €/wk</span>
+    </div>
 
-<article class="card">
-<img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f" alt="Fast drone racing model" />
-<h3>SkyRacer X</h3>
-<p>High-speed racing drone built for performance.</p>
-<p class="price">45 €/d — 150 €/wk</p>
-</article>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16" alt="Tripod ProFlex" />
+      <h3>Tripod ProFlex</h3>
+      <p>Stable and lightweight tripod for all environments.</p>
+      <span class="price">9 €/d — 49 €/wk</span>
+    </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="SkyPhoto Ultra Drone Camera" />
+      <h3>SkyPhoto Ultra</h3>
+      <p>Advanced long‑range drone camera with ultra‑clear imaging.</p>
+      <span class="price">59 €/d — 249 €/wk</span>
+    </div>
 
-</div>
-</section>
+  </section>
 
-
-<section class="video-section">
-<h2>Product Overview Video</h2>
-<video controls preload="metadata" poster="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
-<source src="https://cdn.coverr.co/videos/coverr-aerial-shot-of-a-drone-flying-1080p.mp4" type="video/mp4" />
-<source src="https://cdn.coverr.co/videos/coverr-aerial-shot-of-a-drone-flying-1080p.webm" type="video/webm" />
-<track kind="captions" srclang="en" label="English" src="captions.vtt" />
-Your browser does not support the video tag.
-</video>
-</section>
-</main>
-
-
-<footer>
-<p>© 2025 SkyRent Drones</p>
-</footer>
-
-
+  <section class="video-section">
+    <h2>Product Overview Video</h2>
+    <video controls preload="metadata" poster="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="video">
+      <source src="video.mp4" type="video/mp4" />
+      <source src="video.webm" type="video/webm" />
+      <track kind="captions" src="captions.vtt" srclang="en" label="English captions" />
+    </video>
+  </section>
 </body>
 </html>
