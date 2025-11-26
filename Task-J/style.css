@@ -18,36 +18,43 @@ body {
 
 /* HERO SECTION (Home Page) */
 .hero {
-  position: relative;
   width: 100%;
-  height: 65vh;
-  overflow: hidden;
+  height: 75vh;
+  background-image: url("images/drone-hero.jpg"); /* <-- SET YOUR IMAGE HERE */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.hero img {
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  filter: brightness(70%);
+  background: rgba(0, 0, 0, 0.45); /* dark overlay to improve text visibility */
 }
 
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.hero-content {
+  position: relative;
   text-align: center;
+  z-index: 2;
   color: white;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
 }
 
-.hero-text p {
+.hero-content p {
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 25px;
 }
 
 .cta {
