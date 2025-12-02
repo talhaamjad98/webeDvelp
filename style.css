@@ -1,7 +1,5 @@
-/*
-Author: Talha Amjad
-Date: 2025-11-20
-*/
+/* Author: Talha Amjad */
+
 /* Global Reset */
 * {
   margin: 0;
@@ -16,7 +14,7 @@ body {
   line-height: 1.6;
 }
 
-/* HERO SECTION (Home Page) */
+/* HERO SECTION */
 .hero {
   position: relative;
   width: 100%;
@@ -45,9 +43,10 @@ body {
   margin-bottom: 1rem;
 }
 
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
 
 .cta {
@@ -61,8 +60,12 @@ body {
   transition: 0.3s;
 }
 
+.cta.secondary {
+  background-color: #00a86b;
+}
+
 .cta:hover {
-  background-color: #003d99;
+  filter: brightness(85%);
 }
 
 /* SECTIONS */
@@ -85,7 +88,7 @@ h2 {
   text-align: center;
 }
 
-/* PRODUCT CARDS (Home + Catalog) */
+/* CARDS */
 .card-grid,
 .catalog-grid {
   display: grid;
@@ -128,41 +131,7 @@ h2 {
   padding: 0 12px;
 }
 
-/* FEATURES LIST */
-.features ul {
-  list-style: none;
-}
-
-.features li {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-/* VIDEO SECTION */
-.video-section {
-  text-align: center;
-}
-
-video {
-  max-width: 100%;
-  border-radius: 12px;
-  margin-top: 10px;
-}
-
-/* FOOTER */
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-footer p {
-  margin: 6px 0;
-}
-
-/* NAV HEADER (Catalog Only) */
+/* NAV HEADER */
 .nav-header {
   background-color: #003366;
   padding: 15px 20px;
@@ -183,13 +152,14 @@ footer p {
   padding: 8px 18px;
   border-radius: 6px;
   transition: 0.3s;
+  margin-left: 10px;
 }
 
 .nav-header a:hover {
   background-color: #002f80;
 }
 
-/* BIG TOP IMAGE ON CATALOG PAGE */
+/* CATALOG IMAGE */
 .catalog-hero-img img {
   width: 100%;
   max-height: 420px;
@@ -199,8 +169,77 @@ footer p {
   display: block;
 }
 
-/* CTA small version */
-.cta.small {
-  padding: 8px 18px;
-  font-size: 0.95rem;
+/* VIDEO */
+video {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* FORM STYLING */
+.order-form-section {
+  max-width: 900px;
+  margin: auto;
+}
+
+.order-form {
+  background: #f7f9fc;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.order-form fieldset {
+  border: 1px solid #cccccc;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.order-form legend {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.order-form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
 }

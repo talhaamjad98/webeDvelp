@@ -1,0 +1,102 @@
+<!-- Author: Talha Amjad -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place an Order – SkyRent Drones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="nav-header">
+  <nav>
+    <h1>SkyRent Drones</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="about">
+  <h2>Place Your Rental Order</h2>
+  <p>
+    Fill out the form below to request a drone rental. We will contact you shortly to confirm
+    availability, pricing, and pickup details.
+  </p>
+</section>
+
+<section class="order-form-section">
+
+<form action="thanks.html" method="GET" class="order-form">
+
+  <fieldset>
+    <legend>Customer Information</legend>
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Rental Details</legend>
+
+    <label for="item">Item to Rent</label>
+    <select id="item" name="item" required>
+      <option value="">Select an item</option>
+      <option>SkyMaster Survey Drone</option>
+      <option>AeroVision 4K</option>
+      <option>SkyMini Explorer</option>
+      <option>RescuePro X2</option>
+      <option>FPV Racer 300</option>
+      <option>SkyPhoto Ultra</option>
+    </select>
+
+    <label for="start">Start Date</label>
+    <input type="date" id="start" name="start" required>
+
+    <label for="end">End Date</label>
+    <input type="date" id="end" name="end" required>
+
+    <label for="qty">Quantity</label>
+    <input type="number" id="qty" name="qty" min="1" max="10" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Additional Info</legend>
+
+    <label for="message">Special requests</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+ <div class="terms-wrapper">
+    <input type="checkbox" id="terms" required>
+    <label for="terms">I accept the rental terms and privacy policy.</label>
+</div>
+
+
+
+  </fieldset>
+
+  <button type="submit" class="cta">Submit Rental Request</button>
+
+</form>
+
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 SkyRent Drones</p>
+</footer>
+
+</body>
+</html>
