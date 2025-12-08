@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkyRent Catalog</title>
+  <title>SkyRent – Catalog</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,40 +21,46 @@
 </header>
 
 <main>
+  <section class="catalog-hero-img">
+    <h2 class="visually-hidden">Catalog Banner</h2>
+    <!-- Required example image -->
+    <img src="example.jpg" alt="Example catalog banner image">
+  </section>
 
-<section class="catalog-hero-img">
-  <img src="example.jpg" alt="Catalog banner image">
-</section>
+  <section class="catalog-grid">
+    <article class="card">
+      <img src="https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg" alt="Survey drone">
+      <h3>SkyMaster Survey Drone</h3>
+      <p>High-accuracy LIDAR drone for mapping.</p>
+      <p class="price">89 €/day · 299 €/week</p>
+    </article>
 
-<section class="catalog-grid">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e" alt="4K drone">
+      <h3>AeroVision 4K</h3>
+      <p>Professional 4K drone for video shooting.</p>
+      <p class="price">59 €/day · 199 €/week</p>
+    </article>
 
-  <article class="card">
-    <img src="https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg" alt="LIDAR drone">
-    <h3>SkyMaster Survey Drone</h3>
-    <p>High-accuracy mapping drone</p>
-    <p class="price">89 €/day · 299 €/week</p>
-  </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/402035/pexels-photo-402035.jpeg" alt="Beginner drone">
+      <h3>SkyMini Explorer</h3>
+      <p>Beginner-friendly lightweight drone.</p>
+      <p class="price">29 €/day · 120 €/week</p>
+    </article>
+  </section>
 
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e" alt="Cinema drone">
-    <h3>AeroVision 4K</h3>
-    <p>Professional 4K filming drone</p>
-    <p class="price">59 €/day · 199 €/week</p>
-  </article>
-
-  <article class="card">
-    <img src="https://images.pexels.com/photos/402035/pexels-photo-402035.jpeg" alt="Beginner drone">
-    <h3>SkyMini Explorer</h3>
-    <p>Easy to fly, beginner-friendly</p>
-    <p class="price">29 €/day · 120 €/week</p>
-  </article>
-
-</section>
-
+  <section class="video-section">
+    <h2>Product Overview Video</h2>
+    <video controls preload="metadata">
+      <source src="video for basics of web development by pexels.mp4" type="video/mp4">
+    </video>
+  </section>
 </main>
 
 <footer>
   <p>© 2025 SkyRent Drones</p>
+  <p>Email: contact@skyrent.com</p>
 </footer>
 
 </body>
