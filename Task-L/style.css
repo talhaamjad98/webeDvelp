@@ -260,3 +260,11 @@ footer {
 footer p {
   margin: 6px 0;
 }
+
+/* Fix catalog heading alignment */
+.catalog-title {
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  padding: 0 10px;
+  text-align: left;
+}
