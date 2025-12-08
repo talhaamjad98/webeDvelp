@@ -1,0 +1,82 @@
+<!-- Author: Talha Amjad -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order – SkyRent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav-header">
+  <nav>
+    <h1>SkyRent Drones</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="order.html" class="active">Order</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="about">
+  <h2>Place Your Order</h2>
+</section>
+
+<section class="order-form-section">
+
+<form class="order-form">
+
+  <fieldset>
+    <legend>Customer Information</legend>
+
+    <label for="name">Full Name</label>
+    <input id="name" type="text" required>
+
+    <label for="email">Email</label>
+    <input id="email" type="email" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Rental Details</legend>
+
+    <label for="item">Drons</label>
+    <select id="item" required>
+      <option value="">Choose a drone</option>
+      <option>SkyMaster</option>
+      <option>AeroVision</option>
+      <option>SkyMini</option>
+    </select>
+
+    <label for="start">Start Date</label>
+    <input id="start" type="date" required>
+
+    <label for="end">End Date</label>
+    <input id="end" type="date" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Terms</legend>
+    <div class="terms-wrapper">
+      <input id="terms" type="checkbox" required>
+      <label for="terms">I accept the terms and conditions</label>
+    </div>
+  </fieldset>
+
+  <button class="cta" type="submit">Submit Order</button>
+
+</form>
+
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 SkyRent Drones</p>
+</footer>
+
+</body>
+</html>
